@@ -18,17 +18,4 @@
       this.chart.series[1].setData(seriesData, false);
     });
 
-    H.wrap(H.Tooltip.prototype, 'formatter', function() {
-      if(this.point.date) {
-            // Mimic default tooltip contents
-            return '● '+this.series.name+
-                   '<br/>x: <b>'+this.point.x+
-                   '</b><br/>y: <b>'+this.point.y+
-                   '</b><br/>';
-        }
-
-        // If tooltip is disabled
-        return false;
-    });
-
 }(Highcharts)); 
